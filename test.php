@@ -14,7 +14,7 @@
   </body>
     <script type="text/javascript">
        window.onload = function(){
-           var contador = new Contador(0,999999,6,100,"contenedor","/box2/web/inc/contador",42,17);
+           var contador = new Contador(0,999999,6,100,"contador","/contador",42,17);
            contador.show();
            contador.animar();
        }

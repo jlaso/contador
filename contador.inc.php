@@ -53,9 +53,11 @@
             for (i=0;i<a.length;i++){
                 valor = parseInt(a[i]) * this.altoImg + this.offsetImg;
                 contenedor.innerHTML += //a[i]+
-                    "<span id='dig"+e+"' class='digitJlaso' style='background-position: 0px -"+valor+"px;'>"+
-                    "    <img src='"+this.pathImg+"/transp30x45.png'/>"+
-                    "</span>";
+                  '<a href="http://jaitec.net/blog/contador-visitas" target="_blank">'+
+                    '<span id="dig'+e+'" class="digitJlaso" style="background-position: 0px -'+valor+'px;">'+
+                    '    <img src="'+this.pathImg+'/transp30x45.png"/>'+
+                    '</span>'+
+                  '</a>';
                 e--;
             }                        
         },
