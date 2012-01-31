@@ -4,16 +4,17 @@
 }
 .digitJlaso {
     background-image:url('digitos.png');
+    background-position: 0px 0px;
     background-repeat:no-repeat;
     width:30px;
     height:45px;
     vert-align:middle;
     padding-top:30px;
+    *padding-top: 0px;  /* para que solo lo tome en cuenta IE7 e inferiores */
 }
 </style>
-
 <script type="text/javascript">
-
+    
     /*
      * Objeto contador
      * 
@@ -73,7 +74,7 @@
                 var dig = document.getElementById("dig"+d);
                 dig.style.backgroundPosition="0 -"+this.actualP[d]+"px"; 
             }
-            if (this.actualP[0]>this.stopP){
+            if (this.actualP[0]>this.stopP){                
                 clearInterval(this.interval);
                 if (this.actual<this.stop-1){
                     this.actual++;
@@ -89,7 +90,7 @@
                 }
                 this.stopP = this.actualP[0] + this.altoImg; 
                 var that = this;
-                this.interval = setInterval(function(){that.animarDigito();}, this.millisecs);
+                this.interval = setInterval(function(){that.animarDigito();},this.milisegs);
             }
         }
     }

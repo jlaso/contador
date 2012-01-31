@@ -19,3 +19,10 @@ De momento no son parametrizables en la llamada algunos valores que luego si se 
 configurar.
 
 Joseluis Laso 
+
+Probado con los siguientes navegadores
+
+en W-XP: IE8, Safari 5.1.2, FF 9.0.1, Chrome 16.0
+
+si encuentras algún navegador en el que test.php no funcione correctamente por favor, hazme
+saber navegador, versión y S.O. para poder solventarlo, gracias.
