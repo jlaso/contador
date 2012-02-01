@@ -94,7 +94,6 @@ class Contador {
                 $result = $conn->query($sql);
                 if ($row = $result->fetchObject()){
                     $cant = $row->cuenta+1;
-                    print " ## ".$row->fecha." // ".date("U")." ## ";
                     if ( date ("U") - $row->fecha > $this->lapso ){
                         $sql = "UPDATE contador SET cuenta = ".$cant." WHERE `id` = {$row->id}";
                         $conn->query($sql);
