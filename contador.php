@@ -22,13 +22,13 @@ class Contador {
    // segundos que han de transcurrir para que se considere una nueva visita
    private $lapso = 86400; // 24h * 60m * 60s;
    // path de las imagenes, relativas al index
-   private $pathImg = 'inc/contador';
+   private $pathImg = '.';
    // total acumulado, para no tener que hacer la consulta cada vez
    private $total = -1;
    // total anterior a la actualización para poder hacer animiación del cambio
    private $totalAnt = -1;
  
-   public function __construct(PDO $orm, $lapso = 86400, $pathImg='inc/contador'){
+   public function __construct(PDO $orm, $lapso = 86400, $pathImg='.'){
        $this->lapso = $lapso;
        $this->pathImg = $pathImg;
        if ($orm){
@@ -50,6 +50,10 @@ class Contador {
     */
    
    public function getError(){ return $this->error; }
+   public function getTotal(){ return $this->total; }
+   
+   // para establecer el totalAnt en el caso de controlar cookies para el navegador del usuario
+   public function setTotalAnt($ant) { $this->totalAnt = $ant; }
    
    public function __destruct() {
        //if ($this->orm) $orm->close();

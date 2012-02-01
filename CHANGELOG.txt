@@ -1,0 +1,7 @@
+01/02/2012
+----------
+
+- Se incluye control de cookies en un ejemplo php para poder controlar el valor
+    del contador la última vez que se visitó la página y animar el contador hasta
+    el número de visitas que haya actualmente, dando más vistosidad al contador.
+
